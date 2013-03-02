@@ -1,0 +1,28 @@
+<% title "Event" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @provided_event.name %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%= @provided_event.location %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @provided_event.description %>
+</p>
+<p>
+  <strong>Time:</strong>
+  <%= @provided_event.time %>
+</p>
+<p>
+  <strong>Duration:</strong>
+  <%= @provided_event.duration %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_provider_provided_event_path(@provider, @provided_event), :class => "edit_link"%> |
+  <%= link_to "Destroy", [@provider, @provided_event], :confirm => 'Are you sure?', :method => :delete, :class => "delete_link"%> |
+  <%= link_to "View All", provider_provided_events_path(@provider), :class => "index_link"%>
+</p>

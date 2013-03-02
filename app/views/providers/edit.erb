@@ -1,0 +1,8 @@
+<% title "Edit Provider" %>
+
+<%= render 'form' %>
+
+<p>
+  <%= link_to "Show", [current_user, @provider] %> |
+  <%= link_to "View All", user_providers_path(current_user) %>
+</p>

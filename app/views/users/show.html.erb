@@ -1,0 +1,21 @@
+<h3>User</h3>
+<p>User: <%= @user.name %></p>
+<p>Email: <%= @user.email if @user.email %></p>
+<p>Avatar: <%= image_tag @user.avatar.url(:medium) if @user.avatar.present? %></p>
+
+<div class="links">
+  <% if can? :manage, @user %>
+    <p><%= link_to "New Event", new_user_personal_event_path(@user), :class => "new_link" %></p>
+    <p><%= link_to "Register Provider", new_user_provider_path(@user), :class => "register_provider_path" if @user.has_role? :manager %> </p>
+  <% elsif user_signed_in? %>
+    <% if current_user.followed_ids.include? @user.id %>
+      <p><%= button_to "Unfollow", unfollow_user_path(current_user, :follows => @user.id) %></p>
+    <% else %>
+      <p><%= button_to "Follow", follow_user_path(current_user, :follows => @user.id) %> </p>
+    <% end %>
+  <% else %>
+    <p><%= link_to "Not a member?", new_user_registration_path %></p>
+    <p><%= link_to "Already a member?", new_user_session_path %></p>
+  <% end %>
+</div>
+    

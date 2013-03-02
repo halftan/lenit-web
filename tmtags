@@ -1,0 +1,150 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	Development	//
+"Followings" do	/Users/halftan/rails/Lenit/spec/models/follwers_spec.rb	/^describe "Followings" do$/;"	describe	line:3
+"GET 'show'" do	/Users/halftan/rails/Lenit/spec/controllers/users_controller_spec.rb	/^    describe "GET 'show'" do$/;"	describe	line:11
+"Users controller" do	/Users/halftan/rails/Lenit/spec/controllers/users_controller_spec.rb	/^  describe "Users controller" do$/;"	describe	line:5
+"events" do	/Users/halftan/rails/Lenit/spec/models/event_spec.rb	/^  describe "events" do$/;"	describe	line:18
+"events" do	/Users/halftan/rails/Lenit/spec/models/provider_spec.rb	/^  describe "events" do$/;"	describe	line:25
+"must belong to user" do	/Users/halftan/rails/Lenit/spec/models/authentication_spec.rb	/^  describe "must belong to user" do$/;"	describe	line:5
+"owner" do	/Users/halftan/rails/Lenit/spec/models/provider_spec.rb	/^  describe "owner" do$/;"	describe	line:18
+"password encryption" do	/Users/halftan/rails/Lenit/spec/models/user_spec.rb	/^  describe "password encryption" do$/;"	describe	line:87
+"password validations" do	/Users/halftan/rails/Lenit/spec/models/user_spec.rb	/^  describe "password validations" do$/;"	describe	line:67
+"passwords" do	/Users/halftan/rails/Lenit/spec/models/user_spec.rb	/^  describe "passwords" do$/;"	describe	line:52
+"personal_events" do	/Users/halftan/rails/Lenit/spec/models/event_spec.rb	/^  describe "personal_events" do$/;"	describe	line:5
+#container 	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^#container {$/;"	id	line:21
+#flash_alert 	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^#flash_error, #flash_alert {$/;"	id	line:40
+#flash_alert 	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^#flash_notice, #flash_error, #flash_alert {$/;"	id	line:30
+#flash_error	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^#flash_error, #flash_alert {$/;"	id	line:40
+#flash_error	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^#flash_notice, #flash_error, #flash_alert {$/;"	id	line:30
+#flash_notice	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^#flash_notice, #flash_error, #flash_alert {$/;"	id	line:30
+#flash_notice 	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^#flash_notice {$/;"	id	line:35
+.clear	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^.clear {$/;"	class	line:15
+.error_messages	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^.error_messages {$/;"	class	line:49
+.error_messages h2	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^.error_messages h2 {$/;"	class	line:59
+.error_messages p	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^.error_messages p {$/;"	class	line:69
+.error_messages ul	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^.error_messages ul {$/;"	class	line:73
+.fieldWithErrors	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^.fieldWithErrors {$/;"	class	line:45
+Ability	/Users/halftan/rails/Lenit/app/models/ability.rb	/^class Ability$/;"	class	line:1
+AddAttachmentAvatarToUsers	/Users/halftan/rails/Lenit/db/migrate/20130130133810_add_attachment_avatar_to_users.rb	/^class AddAttachmentAvatarToUsers < ActiveRecord::Migration$/;"	class	line:1
+AddDetailToUsers	/Users/halftan/rails/Lenit/db/migrate/20130130132512_add_detail_to_users.rb	/^class AddDetailToUsers < ActiveRecord::Migration$/;"	class	line:1
+Application	/Users/halftan/rails/Lenit/config/application.rb	/^  class Application < Rails::Application$/;"	class	line:13
+ApplicationController	/Users/halftan/rails/Lenit/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
+ApplicationHelper	/Users/halftan/rails/Lenit/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	module	line:1
+Attendance	/Users/halftan/rails/Lenit/app/models/attendance.rb	/^class Attendance < ActiveRecord::Base$/;"	class	line:1
+Authentication	/Users/halftan/rails/Lenit/app/models/authentication.rb	/^class Authentication < ActiveRecord::Base$/;"	class	line:1
+Authentication do	/Users/halftan/rails/Lenit/spec/models/authentication_spec.rb	/^describe Authentication do$/;"	describe	line:3
+CreateAttendances	/Users/halftan/rails/Lenit/db/migrate/20130130135502_create_attendances.rb	/^class CreateAttendances < ActiveRecord::Migration$/;"	class	line:1
+CreateAuthentications	/Users/halftan/rails/Lenit/db/migrate/20130130121153_create_authentications.rb	/^class CreateAuthentications < ActiveRecord::Migration$/;"	class	line:1
+CreateEvents	/Users/halftan/rails/Lenit/db/migrate/20130130092835_create_events.rb	/^class CreateEvents < ActiveRecord::Migration$/;"	class	line:1
+CreateFollowings	/Users/halftan/rails/Lenit/db/migrate/20130227125800_create_followings.rb	/^class CreateFollowings < ActiveRecord::Migration$/;"	class	line:1
+CreateProviders	/Users/halftan/rails/Lenit/db/migrate/20130204082504_create_providers.rb	/^class CreateProviders < ActiveRecord::Migration$/;"	class	line:1
+DeviseCreateUsers	/Users/halftan/rails/Lenit/db/migrate/20130130090602_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	class	line:1
+EmailHelpers	/Users/halftan/rails/Lenit/features/step_definitions/email_steps.rb	/^module EmailHelpers$/;"	module	line:27
+ErrorMessagesHelper	/Users/halftan/rails/Lenit/app/helpers/error_messages_helper.rb	/^module ErrorMessagesHelper$/;"	module	line:1
+Event	/Users/halftan/rails/Lenit/app/models/event.rb	/^class Event < ActiveRecord::Base$/;"	class	line:1
+Event do	/Users/halftan/rails/Lenit/spec/models/event_spec.rb	/^describe Event do$/;"	describe	line:3
+EventError	/Users/halftan/rails/Lenit/app/models/event.rb	/^  class EventError < StandardError; end$/;"	class	line:3
+EventsController	/Users/halftan/rails/Lenit/app/controllers/events_controller.rb	/^class EventsController < ApplicationController$/;"	class	line:1
+EventsController do	/Users/halftan/rails/Lenit/spec/controllers/events_controller_spec.rb	/^describe EventsController do$/;"	describe	line:3
+EventsHelper	/Users/halftan/rails/Lenit/app/helpers/events_helper.rb	/^module EventsHelper$/;"	module	line:1
+Following	/Users/halftan/rails/Lenit/app/models/following.rb	/^class Following < ActiveRecord::Base$/;"	class	line:1
+FormBuilderAdditions	/Users/halftan/rails/Lenit/app/helpers/error_messages_helper.rb	/^  module FormBuilderAdditions$/;"	module	line:16
+HomeController	/Users/halftan/rails/Lenit/app/controllers/home_controller.rb	/^class HomeController < ApplicationController$/;"	class	line:1
+HomeHelper	/Users/halftan/rails/Lenit/app/helpers/home_helper.rb	/^module HomeHelper$/;"	module	line:1
+LEVEL	/Users/halftan/rails/Lenit/app/models/event.rb	/^  def self.LEVEL$/;"	singleton method	line:22
+LayoutHelper	/Users/halftan/rails/Lenit/app/helpers/layout_helper.rb	/^module LayoutHelper$/;"	module	line:5
+Lenit	/Users/halftan/rails/Lenit/config/application.rb	/^module Lenit$/;"	module	line:12
+NavigationHelpers	/Users/halftan/rails/Lenit/features/support/paths.rb	/^module NavigationHelpers$/;"	module	line:1
+PersonalEvent	/Users/halftan/rails/Lenit/app/models/personal_event.rb	/^class PersonalEvent < Event$/;"	class	line:1
+PersonalEventsController	/Users/halftan/rails/Lenit/app/controllers/personal_events_controller.rb	/^class PersonalEventsController < ApplicationController$/;"	class	line:1
+ProvidedEvent	/Users/halftan/rails/Lenit/app/models/provided_event.rb	/^class ProvidedEvent < Event$/;"	class	line:1
+ProvidedEventsController	/Users/halftan/rails/Lenit/app/controllers/provided_events_controller.rb	/^class ProvidedEventsController < ApplicationController$/;"	class	line:1
+Provider	/Users/halftan/rails/Lenit/app/models/provider.rb	/^class Provider < ActiveRecord::Base$/;"	class	line:1
+Provider do	/Users/halftan/rails/Lenit/spec/models/provider_spec.rb	/^describe Provider do$/;"	describe	line:3
+ProvidersController	/Users/halftan/rails/Lenit/app/controllers/providers_controller.rb	/^class ProvidersController < ApplicationController$/;"	class	line:1
+ProvidersHelper	/Users/halftan/rails/Lenit/app/helpers/providers_helper.rb	/^module ProvidersHelper$/;"	module	line:1
+Role	/Users/halftan/rails/Lenit/app/models/role.rb	/^class Role < ActiveRecord::Base$/;"	class	line:1
+RolifyCreateRoles	/Users/halftan/rails/Lenit/db/migrate/20130130090611_rolify_create_roles.rb	/^class RolifyCreateRoles < ActiveRecord::Migration$/;"	class	line:1
+User	/Users/halftan/rails/Lenit/app/models/user.rb	/^class User < ActiveRecord::Base$/;"	class	line:1
+User do	/Users/halftan/rails/Lenit/spec/models/user_spec.rb	/^describe User do$/;"	describe	line:3
+UsersController	/Users/halftan/rails/Lenit/app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	class	line:1
+UsersController do	/Users/halftan/rails/Lenit/spec/controllers/users_controller_spec.rb	/^describe UsersController do$/;"	describe	line:3
+a 	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^a {$/;"	selector	line:11
+a img 	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^a img {$/;"	selector	line:7
+all	/Users/halftan/rails/Lenit/app/controllers/providers_controller.rb	/^  def all$/;"	method	line:17
+body 	/Users/halftan/rails/Lenit/public/stylesheets/application.css	/^body {$/;"	selector	line:1
+change	/Users/halftan/rails/Lenit/db/migrate/20130130090602_devise_create_users.rb	/^  def change$/;"	method	line:2
+change	/Users/halftan/rails/Lenit/db/migrate/20130130090611_rolify_create_roles.rb	/^  def change$/;"	method	line:2
+change	/Users/halftan/rails/Lenit/db/migrate/20130130092835_create_events.rb	/^  def change$/;"	method	line:2
+change	/Users/halftan/rails/Lenit/db/migrate/20130130121153_create_authentications.rb	/^  def change$/;"	method	line:2
+change	/Users/halftan/rails/Lenit/db/migrate/20130130132512_add_detail_to_users.rb	/^  def change$/;"	method	line:2
+change	/Users/halftan/rails/Lenit/db/migrate/20130130135502_create_attendances.rb	/^  def change$/;"	method	line:2
+change	/Users/halftan/rails/Lenit/db/migrate/20130204082504_create_providers.rb	/^  def change$/;"	method	line:2
+change	/Users/halftan/rails/Lenit/db/migrate/20130227125800_create_followings.rb	/^  def change$/;"	method	line:2
+create	/Users/halftan/rails/Lenit/app/controllers/events_controller.rb	/^  def create$/;"	method	line:15
+create	/Users/halftan/rails/Lenit/app/controllers/personal_events_controller.rb	/^  def create$/;"	method	line:13
+create	/Users/halftan/rails/Lenit/app/controllers/provided_events_controller.rb	/^  def create$/;"	method	line:14
+create	/Users/halftan/rails/Lenit/app/controllers/providers_controller.rb	/^  def create$/;"	method	line:22
+create_unconfirmed_user	/Users/halftan/rails/Lenit/features/step_definitions/user_steps.rb	/^def create_unconfirmed_user$/;"	method	line:12
+create_user	/Users/halftan/rails/Lenit/features/step_definitions/user_steps.rb	/^def create_user$/;"	method	line:19
+create_visitor	/Users/halftan/rails/Lenit/features/step_definitions/user_steps.rb	/^def create_visitor$/;"	method	line:3
+current_email_address	/Users/halftan/rails/Lenit/features/step_definitions/email_steps.rb	/^  def current_email_address$/;"	method	line:28
+delete_user	/Users/halftan/rails/Lenit/features/step_definitions/user_steps.rb	/^def delete_user$/;"	method	line:25
+destroy	/Users/halftan/rails/Lenit/app/controllers/events_controller.rb	/^  def destroy$/;"	method	line:37
+destroy	/Users/halftan/rails/Lenit/app/controllers/personal_events_controller.rb	/^  def destroy$/;"	method	line:32
+destroy	/Users/halftan/rails/Lenit/app/controllers/provided_events_controller.rb	/^  def destroy$/;"	method	line:33
+destroy	/Users/halftan/rails/Lenit/app/controllers/providers_controller.rb	/^  def destroy$/;"	method	line:41
+destroy	/Users/halftan/rails/Lenit/app/controllers/users_controller.rb	/^  def destroy$/;"	method	line:51
+display_base_errors	/Users/halftan/rails/Lenit/app/helpers/application_helper.rb	/^  def display_base_errors resource$/;"	method	line:3
+down	/Users/halftan/rails/Lenit/db/migrate/20130130133810_add_attachment_avatar_to_users.rb	/^  def self.down$/;"	singleton method	line:8
+edit	/Users/halftan/rails/Lenit/app/controllers/events_controller.rb	/^  def edit$/;"	method	line:24
+edit	/Users/halftan/rails/Lenit/app/controllers/personal_events_controller.rb	/^  def edit$/;"	method	line:21
+edit	/Users/halftan/rails/Lenit/app/controllers/provided_events_controller.rb	/^  def edit$/;"	method	line:22
+edit	/Users/halftan/rails/Lenit/app/controllers/providers_controller.rb	/^  def edit$/;"	method	line:30
+error_messages	/Users/halftan/rails/Lenit/app/helpers/error_messages_helper.rb	/^    def error_messages(options = {})$/;"	method	line:17
+error_messages_for	/Users/halftan/rails/Lenit/app/helpers/error_messages_helper.rb	/^  def error_messages_for(*objects)$/;"	method	line:3
+find_user	/Users/halftan/rails/Lenit/features/step_definitions/user_steps.rb	/^def find_user$/;"	method	line:8
+follow	/Users/halftan/rails/Lenit/app/controllers/users_controller.rb	/^  def follow$/;"	method	line:4
+follow!	/Users/halftan/rails/Lenit/app/models/user.rb	/^  def follow! other$/;"	method	line:38
+helpers	/Users/halftan/rails/Lenit/app/controllers/users_controller.rb	/^  def helpers$/;"	method	line:63
+index	/Users/halftan/rails/Lenit/app/controllers/events_controller.rb	/^  def index$/;"	method	line:2
+index	/Users/halftan/rails/Lenit/app/controllers/home_controller.rb	/^  def index$/;"	method	line:2
+index	/Users/halftan/rails/Lenit/app/controllers/personal_events_controller.rb	/^  def index$/;"	method	line:3
+index	/Users/halftan/rails/Lenit/app/controllers/provided_events_controller.rb	/^  def index$/;"	method	line:4
+index	/Users/halftan/rails/Lenit/app/controllers/providers_controller.rb	/^  def index$/;"	method	line:7
+index	/Users/halftan/rails/Lenit/app/controllers/users_controller.rb	/^  def index$/;"	method	line:31
+initialize	/Users/halftan/rails/Lenit/app/models/ability.rb	/^  def initialize(user)$/;"	method	line:4
+is_manager?	/Users/halftan/rails/Lenit/app/models/user.rb	/^  def is_manager?$/;"	method	line:59
+javascript	/Users/halftan/rails/Lenit/app/helpers/layout_helper.rb	/^  def javascript(*args)$/;"	method	line:19
+load_manager_id	/Users/halftan/rails/Lenit/app/models/role.rb	/^  def load_manager_id$/;"	method	line:15
+manager_id	/Users/halftan/rails/Lenit/app/models/role.rb	/^  def self.manager_id$/;"	singleton method	line:9
+new	/Users/halftan/rails/Lenit/app/controllers/events_controller.rb	/^  def new$/;"	method	line:10
+new	/Users/halftan/rails/Lenit/app/controllers/personal_events_controller.rb	/^  def new$/;"	method	line:9
+new	/Users/halftan/rails/Lenit/app/controllers/provided_events_controller.rb	/^  def new$/;"	method	line:10
+new	/Users/halftan/rails/Lenit/app/controllers/providers_controller.rb	/^  def new$/;"	method	line:14
+path_to	/Users/halftan/rails/Lenit/features/support/paths.rb	/^  def path_to(page_name)$/;"	method	line:8
+roles	/Users/halftan/rails/Lenit/app/models/user.rb	/^  def self.roles$/;"	singleton method	line:34
+set_defaults	/Users/halftan/rails/Lenit/app/models/event.rb	/^  def set_defaults$/;"	method	line:28
+show	/Users/halftan/rails/Lenit/app/controllers/events_controller.rb	/^  def show$/;"	method	line:6
+show	/Users/halftan/rails/Lenit/app/controllers/personal_events_controller.rb	/^  def show$/;"	method	line:6
+show	/Users/halftan/rails/Lenit/app/controllers/provided_events_controller.rb	/^  def show$/;"	method	line:7
+show	/Users/halftan/rails/Lenit/app/controllers/providers_controller.rb	/^  def show$/;"	method	line:10
+show	/Users/halftan/rails/Lenit/app/controllers/users_controller.rb	/^  def show$/;"	method	line:36
+show_or_hide_links	/Users/halftan/rails/Lenit/app/helpers/providers_helper.rb	/^  def show_or_hide_links provider$/;"	method	line:2
+show_title?	/Users/halftan/rails/Lenit/app/helpers/layout_helper.rb	/^  def show_title?$/;"	method	line:11
+sign_in	/Users/halftan/rails/Lenit/features/step_definitions/user_steps.rb	/^def sign_in$/;"	method	line:41
+sign_up	/Users/halftan/rails/Lenit/features/step_definitions/user_steps.rb	/^def sign_up$/;"	method	line:30
+stylesheet	/Users/halftan/rails/Lenit/app/helpers/layout_helper.rb	/^  def stylesheet(*args)$/;"	method	line:15
+title	/Users/halftan/rails/Lenit/app/helpers/layout_helper.rb	/^  def title(page_title, show_title = true)$/;"	method	line:6
+unfollow	/Users/halftan/rails/Lenit/app/controllers/users_controller.rb	/^  def unfollow$/;"	method	line:17
+unfollow!	/Users/halftan/rails/Lenit/app/models/user.rb	/^  def unfollow! other$/;"	method	line:48
+up	/Users/halftan/rails/Lenit/db/migrate/20130130133810_add_attachment_avatar_to_users.rb	/^  def self.up$/;"	singleton method	line:2
+update	/Users/halftan/rails/Lenit/app/controllers/events_controller.rb	/^  def update$/;"	method	line:28
+update	/Users/halftan/rails/Lenit/app/controllers/personal_events_controller.rb	/^  def update$/;"	method	line:24
+update	/Users/halftan/rails/Lenit/app/controllers/provided_events_controller.rb	/^  def update$/;"	method	line:25
+update	/Users/halftan/rails/Lenit/app/controllers/providers_controller.rb	/^  def update$/;"	method	line:33
+update	/Users/halftan/rails/Lenit/app/controllers/users_controller.rb	/^  def update$/;"	method	line:41

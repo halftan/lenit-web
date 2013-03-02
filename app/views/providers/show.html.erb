@@ -1,0 +1,20 @@
+<% title "Provider" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @provider.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= raw @provider.description %>
+</p>
+
+<p>
+  <%= link_to "View Events", provider_provided_events_path(@provider) %>
+  <% if can? :manage, @provider %>
+    | <%= link_to "New Event", new_provider_provided_event_path(@provider), :class => "new_link" if @provider.manager == current_user %>
+    | <%= link_to "Edit", edit_user_provider_path(current_user, @provider), :class => "edit_link"%> |
+    <%= link_to "Destroy", [current_user, @provider], :confirm => 'Are you sure?', :method => :delete, :class => "delete_link"%> |
+    <%= link_to "View All", user_providers_path(current_user), :class => "index_link"%>
+  <% end %>
+</p>

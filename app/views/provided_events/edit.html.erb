@@ -1,0 +1,8 @@
+<% title "Edit Event" %>
+
+<%= render 'form' %>
+
+<p>
+  <%= link_to "Show", [@provider, @provided_event] %> |
+  <%= link_to "View All", user_provider_path(current_user, @provider) %>
+</p>

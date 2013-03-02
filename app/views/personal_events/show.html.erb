@@ -1,0 +1,32 @@
+<% title "Event" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @personal_event.name %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%= @personal_event.location %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @personal_event.description %>
+</p>
+<p>
+  <strong>Time:</strong>
+  <%= @personal_event.time %>
+</p>
+<p>
+  <strong>Duration:</strong>
+  <%= @personal_event.duration %>
+</p>
+<p>
+  <strong>Level:</strong>
+  <%= @personal_event.level %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_user_personal_event_path(current_user, @personal_event), :class => "edit_link"%> |
+  <%= link_to "Destroy", [current_user, @personal_event], :confirm => 'Are you sure?', :method => :delete, :class => "delete_link"%> |
+  <%= link_to "View All", user_personal_events_path(current_user), :class => "index_link"%>
+</p>
