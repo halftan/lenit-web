@@ -1,42 +1,14 @@
 class EventsController < ApplicationController
-  def index
-    @events = current_user.personal_events.all
-  end
-
-  def show
-    @event = current_user.personal_events.find(params[:id])
-  end
-
-  def new
-    @event = current_user.personal_events.new
-    @event.owner_id = current_user.id
-  end
-
-  def create
-    @event = current_user.personal_events.new(params[:event])
-    if @event.save
-      redirect_to [current_user, @event], :notice => "Successfully created event."
-    else
-      render :action => 'new'
-    end
-  end
-
-  def edit
+  
+  def attend
     @event = Event.find(params[:id])
+    @event.attendees << current_user unless @event.attendees.include? current_user
+    redirect_to :back, :notice => "Successfully attended the event."
   end
-
-  def update
+  
+  def quit
     @event = Event.find(params[:id])
-    if @event.update_attributes(params[:event])
-      redirect_to [current_user, @event], :notice  => "Successfully updated event."
-    else
-      render :action => 'edit'
-    end
-  end
-
-  def destroy
-    @event = current_user.personal_events.find(params[:id])
-    @event.destroy
-    redirect_to user_personal_events_url(current_user), :notice => "Successfully destroyed event."
+    @event.attendees.delete(current_user) if @event.attendees.include? current_user
+    redirect_to :back, :notice => "Successfully quit the event."
   end
 end

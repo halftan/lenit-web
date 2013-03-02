@@ -54,6 +54,14 @@ class User < ActiveRecord::Base
       raise ArgumentError, "Argument class not match."
     end
   end
+  
+  def get_all_events
+    if has_role? :manager
+      providers.map {|p| p.provided_events.available} + personal_events.available
+    else
+      personal_events.available
+    end
+  end
   protected
   
   def is_manager?

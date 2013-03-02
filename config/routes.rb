@@ -8,18 +8,19 @@ Lenit::Application.routes.draw do
   resources :users do
     resources :personal_events, :path => "events"
     resources :providers
-    resources :followeds
-    resources :followers
     member do
       post 'follow'
       post 'unfollow'
+      get 'followed'
+      get 'follower'
     end
   end
   
   resources :providers, :only => [:show, :index, :edit] do
     resources :provided_events, :path => "events"
-    collection do
-      get 'all'
-    end
+    get 'all', on: :collection
   end
+  resources :events, :only => [:show, :index]
+  post 'event/:id/attend' => 'events#attend', :constraints => { :id => /\d+/ }, :as => 'attend_event'
+  post 'event/:id/quit' => 'events#quit', :constraints => { :id => /\d+/ }, :as => 'quit_event'
 end

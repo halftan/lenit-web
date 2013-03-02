@@ -1,5 +1,4 @@
 @friends
-@focus
 Feature: Remove friend
   In order to remove a friend
   As a user
@@ -29,5 +28,3 @@ Feature: Remove friend
     And User whose name is "second" should have 0 "follower"
     And I should see "Successfully unfollowed second"
 
-# TODO: view events after follow
-# TODO: following controller

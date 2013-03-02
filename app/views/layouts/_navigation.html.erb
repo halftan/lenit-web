@@ -5,13 +5,13 @@
       <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
     </li>
     <li>
-      <%= link_to 'Events', user_personal_events_path(current_user) %>
+      <%= link_to 'My Events', user_personal_events_path(current_user) %>
     </li>
     <li>
-      <%= link_to "Followers", user_followers_path(current_user) %>
+      <%= link_to "Followers", follower_user_path(current_user) %>
     </li>
     <li>
-      <%= link_to "Follows", user_followeds_path(current_user) %>
+      <%= link_to "Follows", followed_user_path(current_user) %>
     </li>
     <% if current_user.has_role? :manager %>
     <li>

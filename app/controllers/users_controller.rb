@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
-  
+
   def follow
     authorize! :follow, current_user, :message => "You are editing other user's profile!"
     @user = User.find(params[:id])
@@ -13,21 +13,37 @@ class UsersController < ApplicationController
     end
     redirect_to :back
   end
-  
+
   def unfollow
     authorize! :unfollow, current_user, :message => "You are editing other user's profile!"
     @user = User.find(params[:id])
     follow = User.find(params[:follows])
     if @user.followed_ids.include? params[:follows].to_i
-      @user.unfollow! follow 
+      @user.unfollow! follow
       flash[:notice] = "Successfully unfollowed #{view_context.link_to follow.name, user_path(follow)}!".html_safe
     else
       flash[:notice] = "You are not following this user."
     end
       redirect_to :back
   end
-  
-  # Admin only
+
+  def followed
+    unless user_signed_in?
+      redirect_to new_user_session_path, :notice => "To proceed you need to sign in."
+    else
+      @followeds = current_user.followeds.all
+    end
+  end
+
+  def follower
+    unless user_signed_in?
+      redirect_to new_user_session_path, :notice => "To proceed you need to sign in."
+    else
+      @followers = current_user.followeds.all
+    end
+  end
+
+
   def index
     authorize! :index, current_user, :message => 'Not authorized as an administrator.'
     @users = User.all
@@ -36,6 +52,17 @@ class UsersController < ApplicationController
   def show
     authorize! :show, current_user, :message => "You are not authorized to this page!"
     @user = User.find(params[:id])
+    if params[:filter] == "attended"
+      @events = @user.events
+    elsif params[:filter] == "followed"
+      @events = @user.followeds.inject([]) do |arr, guy|
+        arr + guy.get_all_events
+      end
+    else
+      @events = @user.followeds.inject([]) do |arr, guy|
+        arr + guy.get_all_events
+      end + @user.events
+    end
   end
 
   def update
@@ -58,7 +85,7 @@ class UsersController < ApplicationController
       redirect_to users_path, :notice => "Can't delete yourself."
     end
   end
-  
+
   protected
   def helpers
     ActionController::Base.helpers

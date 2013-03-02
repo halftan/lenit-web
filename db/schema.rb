@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227125800) do
+ActiveRecord::Schema.define(:version => 20130302102039) do
 
   create_table "attendances", :force => true do |t|
     t.integer  "user_id"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20130227125800) do
     t.string   "type"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "host_name"
   end
 
   add_index "events", ["owner_id"], :name => "index_events_on_owner_id"

@@ -7,8 +7,12 @@ Given /^([^ ]*?) whose ([^ ]*?) is "(.*?)" follows "(.*?)"$/ do |model, field, o
   model.where(field.to_sym => one).first.follow! model.where(field.to_sym => other).first
 end
 
+Given(/^User whose name is "(.*?)" adds personal_event name "(.*?)" and location "(.*?)"$/) do |uname, ename, elocation|
+  User.find_by_name(uname).personal_events.create! name: ename, location: elocation
+end
+
 When /^I visit the list of my followed users$/ do
-  visit user_followeds_path @user
+  visit followed_user_path @user
 end
 
 

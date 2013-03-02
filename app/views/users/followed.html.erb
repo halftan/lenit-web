@@ -1,0 +1,23 @@
+<h3>Followed</h3>
+<div class="span8">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @followeds.each do |user| %>
+    <tr>
+      <td><%= link_to user.name, user %></td>
+      <td><%= user.email %></td>
+      <td></td>
+      <td><%= link_to "Unfollow", unfollow_user_path(current_user, :follows => user.id), :method => :post, :class => 'btn btn-mini' %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>

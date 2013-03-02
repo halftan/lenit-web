@@ -43,3 +43,5 @@ Feature: Provider events
     And I click on ".destroy_link"
     Then I should see "Successfully"
     And provider whose name is "School" should have 0 "provided_event"
+    
+# TODO: authorizing
