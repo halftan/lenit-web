@@ -37,6 +37,9 @@ Feature: Provider events
     Then I should see "Successfully"
     And I should see "test", "home"
   
-  
-  
-  # TODO: update and destroy test for provided events  
+  Scenario: delete existing event
+    Given provider "School" has event named "party" and location "classroom"
+    When I am on the show page of the provided_event named "party"
+    And I click on ".destroy_link"
+    Then I should see "Successfully"
+    And provider whose name is "School" should have 0 "provided_event"
