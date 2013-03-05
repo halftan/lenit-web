@@ -1,0 +1,13 @@
+en:
+  app:
+    NewEvent: "New Event"
+    AttendedEvents: "Attended events"
+    FollowedEvent: "Followed user's events"
+    QuitEvent: "Quit event"
+    AttendEvent: "Attend event"
+    RegisterProvider: "Register Provider"
+    EventsOfUser: "Events of user"
+    Unfollow: "Unfollow"
+    Follow: "Follow"
+    NotAMember: "Not a member?"
+    AlreadyAMember: "Already a member?"
