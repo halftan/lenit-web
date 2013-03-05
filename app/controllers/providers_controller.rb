@@ -1,5 +1,6 @@
 class ProvidersController < ApplicationController
-  load_and_authorize_resource :through => :current_user, :except => [:all, :show]
+  load_and_authorize_resource :user, :except => [:all, :show]
+  load_and_authorize_resource :through => :user, :except => [:all, :show]
   rescue_from "ActiveRecord::RecordNotFound" do |ex|
     redirect_to root_url, :alert => 'You are not authorized to this page.'
   end

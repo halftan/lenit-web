@@ -9,6 +9,8 @@
     <% if current_user == @user %>
       <h1>What are people doing?</h1>
       <% if @events.present? %>
+        <%= link_to "Attended events", user_path(current_user, :filter => 'attended') %>
+        <%= link_to "Followed user's events", user_path(current_user, :filter => 'followed') %>
         <div class="span8">
         <table class="table table-condensed">
           <thead>

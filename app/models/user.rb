@@ -57,9 +57,9 @@ class User < ActiveRecord::Base
   
   def get_all_events
     if has_role? :manager
-      providers.map {|p| p.provided_events.available} + personal_events.available
+      providers.inject([]) { |arr, p| arr + p.provided_events.available.to_a } + personal_events.available.to_a
     else
-      personal_events.available
+      personal_events.available.to_a
     end
   end
   protected

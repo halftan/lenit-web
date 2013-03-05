@@ -16,5 +16,13 @@
     | <%= link_to "Edit", edit_user_provider_path(current_user, @provider), :class => "edit_link"%> |
     <%= link_to "Destroy", [current_user, @provider], :confirm => 'Are you sure?', :method => :delete, :class => "delete_link"%> |
     <%= link_to "View All", user_providers_path(current_user), :class => "index_link"%>
+  <% else %>
+    <% if user_signed_in? %>
+      <% if current_user.followed_ids.include? @provider.manager_id %>
+        <p><%= link_to "Unfollow", unfollow_user_path(current_user, :follows => @provider.manager_id), :method => :post, :class => 'btn btn-mini' %></p>
+      <% else %>
+        <p><%= link_to "Follow", follow_user_path(current_user, :follows => @provider.manager_id), :method => :post, :class => 'btn btn-mini' %> </p>
+      <% end %>
+    <% end %>
   <% end %>
 </p>
