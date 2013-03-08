@@ -2,9 +2,13 @@ class HomeController < ApplicationController
   def index
     flash.keep
     if user_signed_in?
-      redirect_to user_path current_user
+      @user = current_user
+      @events = Event.limit(10).order("created_at DESC")
+      @signed_in = true
     else
-      redirect_to new_user_session_path
+      @user = User.new
+      @user.email = nil
+      @user.name = nil
     end
   end
 end
