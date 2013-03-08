@@ -7,7 +7,7 @@
     <th>Description</th>
     <th>Time</th>
     <th>Duration</th>
-    <th>Level</th>
+    <th>Visibility</th>
   </tr>
   <% for event in @provided_events %>
     <tr>
@@ -16,7 +16,7 @@
       <td><%= event.description %></td>
       <td><%= event.time %></td>
       <td><%= event.duration %></td>
-      <td><%= event.level %></td>
+      <td><%= event.visibility %></td>
       <td><%= link_to "Show", [@provider, event] %></td>
       <td><%= link_to "Edit", edit_provider_provided_event_path(@provider, event) %></td>
       <td><%= link_to "Destroy", [@provider, event], :confirm => 'Are you sure?', :method => :delete %></td>

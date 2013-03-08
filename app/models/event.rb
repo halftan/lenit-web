@@ -2,7 +2,7 @@ class Event < ActiveRecord::Base
 
   class EventError < StandardError; end
   
-  attr_accessible :duration, :level, :location, :name, :time, :description, :owner_id
+  attr_accessible :duration, :visibility, :location, :name, :time, :description, :owner_id
 
 
   has_many :attendance
@@ -16,22 +16,22 @@ class Event < ActiveRecord::Base
   scope :available, where('time >= ?', Time.now)
   scope :outdated, where('time < ?', Time.now)
 
-  @@LEVEL = {
+  @@VISIBILITY = {
     :all            => 1,
     :followers_only => 2,
     :specified      => 3
 
   }
   
-  def self.LEVEL
-    @@LEVEL
+  def self.VISIBILITY
+    @@VISIBILITY
   end
   
   private
   
   def set_defaults
     self.time ||= Time.now
-    self.level ||= @@LEVEL[:all]
+    self.visibility ||= @@VISIBILITY[:all]
     self.duration ||= 1.hour
   end
   

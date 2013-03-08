@@ -7,7 +7,7 @@
     <th>Description</th>
     <th>Time</th>
     <th>Duration</th>
-    <th>Level</th>
+    <th>Visibility</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,7 +19,7 @@
       <td><%= event.description %></td>
       <td><%= event.time %></td>
       <td><%= event.duration %></td>
-      <td><%= event.level %></td>
+      <td><%= event.visibility %></td>
       <td><%= link_to "Show", [@user, event] %></td>
       <% if can? :manage, event %>
         <td><%= link_to "Edit", edit_user_personal_event_path(@user, event) %></td>

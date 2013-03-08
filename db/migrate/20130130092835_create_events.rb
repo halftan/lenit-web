@@ -6,7 +6,7 @@ class CreateEvents < ActiveRecord::Migration
       t.text :description
       t.datetime :time
       t.integer :duration
-      t.integer :level
+      t.integer :visibility
       t.references :owner
       
       t.string :type

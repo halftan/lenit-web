@@ -4,7 +4,7 @@ class Ability
   def initialize(user)
     user ||= User.new # guest user (not logged in)
     can :read, ProvidedEvent
-    can :read, PersonalEvent, :level => Event.LEVEL[:all]
+    can :read, PersonalEvent, :visibility => Event.VISIBILITY[:all]
     can :read, Provider
     can :manage, PersonalEvent, :owner_id => user.id
     can :manage, User, :id => user.id
