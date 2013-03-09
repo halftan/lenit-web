@@ -2,6 +2,7 @@
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical span6', :multipart => true }) do |f| %>
   <%= f.error_notification %>
   <%= display_base_errors resource %>
+  <% resource.name = nil; resource.email = nil %>
   <%= f.input :name, :autofocus => true, :required => true, :label => t("app.sign_up.name") %>
   <%= f.input :email, :required => true, :label => t("app.sign_up.email") %>
   <%= f.input :password, :required => true, :label => t("app.sign_up.passwd") %>

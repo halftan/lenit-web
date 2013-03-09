@@ -25,3 +25,19 @@ en:
         passwd: "Password"
         passwd_conf: "Password confirmation"
         current_passwd: "Current password"
+    nav:
+        logout: "Logout"
+        my_events: 'My Events'
+        followers: "Followers"
+        follows: "Follows"
+        my_providers: "My Providers"
+        edit_account: "Edit Account"
+        admin: "Admin"
+        login: "Login"
+        all_providers: "All Providers"
+        signup: "Sign Up"
+    form:
+        name: "Name"
+        description: "Description"
+        event_count: "Event Count"
+        manager: "Manager"
