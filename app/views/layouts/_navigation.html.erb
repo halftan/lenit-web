@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <%= link_to "Lenit", user_path(current_user), :class => 'brand' %>
+  <%= link_to "Lenit", root_url, :class => 'brand' %>
   <ul class="nav">
     <li>
       <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>

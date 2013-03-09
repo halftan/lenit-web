@@ -54,9 +54,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if params[:filter] != "attended" and @user.followeds.present?
       if params[:filter] == "followed"
-      @events = @user.followeds.inject([]) do |arr, guy|
-        arr + guy.get_all_events
-      end
+        @events = @user.followeds.inject([]) do |arr, guy|
+          arr + guy.get_all_events
+        end
       else
         @events = @user.followeds.inject([]) do |arr, guy|
           arr + guy.get_all_events

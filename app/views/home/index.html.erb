@@ -8,7 +8,8 @@
 
 <!--百度地图容器-->
 <div style="width:697px;height:550px;border:#ccc solid 1px;float:left;" id="dituContent" class="span8"></div>
-<% unless user_signed_in? %>
+
+<% unless @signed_in %>
   <div id="sign_in" class="span4">
     <h2>Sign in</h2>
     <%=  %>
@@ -19,6 +20,52 @@
       <%= f.button :submit, "Sign in", :class => 'btn-primary' %>
     <% end %>
     <%= render "devise/shared/links" %>
+  </div>
+<% else %>
+  <%= link_to t("app.attended_events"), root_path(:filter => 'attended') %>
+  <%= link_to "Followed user's events", root_path(:filter => 'followed') %>
+  <div class="span4">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Host</th>
+          <th>Location</th>
+          <th>Time</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @events.each do |event|%>
+        <tr>
+          <td>
+            <% if event.is_a? ProvidedEvent %>
+              <%= link_to event.name, provider_provided_event_path(event.owner_id, event) %>
+            <% else %>
+              <%= link_to event.name, user_personal_event_path(event.owner_id, event) %>
+            <% end %>
+          </td>
+          <td>
+            <% if event.is_a? ProvidedEvent %>
+              <%= link_to event.host_name, provider_path(event.owner_id) %>
+            <% else %>
+              <%= link_to event.host_name, user_path(event.owner_id) %>
+            <% end %>
+          </td>
+          <td><%= event.host_name %></td>
+          <td><%= event.location %></td>
+          <td><%= event.time %></td>
+          <td></td>
+          <% if event.attendees.include? current_user %>
+            <td><%= link_to("Quit event", quit_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
+          <% else %>
+            <td><%= link_to("Attend event", attend_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
+          <% end %>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
   </div>
 <% end %>
 

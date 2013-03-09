@@ -20,7 +20,6 @@ Lenit::Application.routes.draw do
     resources :provided_events, :path => "events"
     get 'all', on: :collection
   end
-  resources :events, :only => [:show, :index]
   post 'event/:id/attend' => 'events#attend', :constraints => { :id => /\d+/ }, :as => 'attend_event'
   post 'event/:id/quit' => 'events#quit', :constraints => { :id => /\d+/ }, :as => 'quit_event'
 end
