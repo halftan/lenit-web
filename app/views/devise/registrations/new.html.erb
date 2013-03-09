@@ -1,12 +1,15 @@
-<h2>Sign up</h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical', :multipart => true }) do |f| %>
+<h2><%= t("app.signup") %></h2>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical span6', :multipart => true }) do |f| %>
   <%= f.error_notification %>
   <%= display_base_errors resource %>
-  <%= f.input :name, :autofocus => true %>
-  <%= f.input :email, :required => true %>
-  <%= f.input :password, :required => true %>
-  <%= f.input :password_confirmation, :required => true %>
+  <%= f.input :name, :autofocus => true, :required => true, :label => t("app.sign_up.name") %>
+  <%= f.input :email, :required => true, :label => t("app.sign_up.email") %>
+  <%= f.input :password, :required => true, :label => t("app.sign_up.passwd") %>
+  <%= f.input :password_confirmation, :required => true, :label => t("app.sign_up.passwd_conf") %>
+  <%= f.label t("app.sign_up.avatar") %>
   <%= f.file_field :avatar %>
-  <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
+  <br/>
+  <br/>
+  <%= f.button :submit, t("app.signup"), :class => 'btn-primary' %>
 <% end %>
 <%= render "devise/shared/links" %>

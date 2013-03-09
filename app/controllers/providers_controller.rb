@@ -17,6 +17,7 @@ class ProvidersController < ApplicationController
   
   def all
     @providers = Provider.order("updated_at DESC")
+    @all_action = true
     render :index
   end
   

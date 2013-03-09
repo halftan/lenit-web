@@ -12,6 +12,16 @@ en:
     not_a_member: "Not a member?"
     already_a_member: "Already a member?"
     remember_me: "Remember Me"
+    signin: "Sign in"
     sign_in:
         email_hint: "Your Email Here"
         password_hint: "Your Password Here"
+    signup: "Sign up"
+    sign_up:
+        avatar: "Avatar"
+        change_password: "we need your current password to confirm your changes"
+        name: "Name"
+        email: "Email"
+        passwd: "Password"
+        passwd_conf: "Password confirmation"
+        current_passwd: "Current password"

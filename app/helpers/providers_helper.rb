@@ -3,7 +3,7 @@ module ProvidersHelper
     links = "<td>#{link_to "Show", provider}</td>" if can? :read, Provider
     if can? :manage, Provider and user_signed_in?
       links += "<td>#{link_to "Edit", edit_user_provider_path(current_user, provider)}</td>"
-      links += "<td>#{link_to "Destroy", [current_user, provider], :confirm => 'Are you sure?', :method => :delete}</td>"
+      links += "<td>#{link_to "Destroy", [current_user, provider], :class => 'btn btn-mini', :confirm => 'Are you sure?', :method => :delete}</td>"
     end
     links
   end

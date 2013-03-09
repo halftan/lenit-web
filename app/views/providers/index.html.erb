@@ -1,17 +1,30 @@
 <% title "Providers" %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <% for provider in @providers %>
-    <tr>
-      <td><%= provider.name %></td>
-      <td><%= provider.description %></td>
-      <%= raw show_or_hide_links provider %>
-    </tr>
-  <% end %>
-</table>
+<div class="span6">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Manager</th>
+        <th>Event Count</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for provider in @providers %>
+        <tr>
+          <td><%= provider.name %></td>
+          <td><%= provider.description %></td>
+          <td><%= link_to provider.manager.name, user_path(provider.manager_id) %></td>
+          <td><%= provider.provided_events.count %></td>
+          <%= raw show_or_hide_links provider %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
-<p><%= link_to "New provider", new_user_provider_path(current_user) if can? :create, Provider %></p>
+<p class="span2"><%= link_to "New provider", new_user_provider_path(current_user), :class => 'btn btn-mini' if can? :create, Provider and @all_action != true %></p>
