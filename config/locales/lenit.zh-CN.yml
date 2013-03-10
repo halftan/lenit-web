@@ -1,3 +1,17 @@
 zh-CN:
   app:
-    NewEvent: 新活动
+    new_event: "新活动"
+    attended_events: "已参加的活动"
+    followeds_events: "关注用户的活动"
+    quit_event: "退出活动"
+    attend_event: "参加活动"
+    register_provider: "注册活动中心"
+    events_of_user: "用户的活动"
+    unfollow: "取消关注"
+    follow: "关注"
+    not_a_member: "还不是会员?"
+    already_a_member: "已经是会员？"
+    remember_me: "记住账户"
+    sign_in:
+        email_hint: "输入邮箱地址"
+        password_hint: "输入密码"
