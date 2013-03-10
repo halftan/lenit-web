@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20130302102039) do
     t.text     "description"
     t.datetime "time"
     t.integer  "duration"
-    t.integer  "level"
+    t.integer  "visibility"
     t.integer  "owner_id"
     t.string   "type"
     t.datetime "created_at",  :null => false

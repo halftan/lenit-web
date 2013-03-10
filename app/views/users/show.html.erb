@@ -28,7 +28,11 @@
           <tbody>
           <% @events.each do |event|%>
             <tr>
-              <td><%= link_to event.name, event_path(event) %></td>
+              <% if event.is_a? ProvidedEvent %>
+                <%= link_to event.name, provider_provided_event_path(event.owner_id, event) %>
+              <% else %>
+                <%= link_to event.name, user_personal_event_path(event.owner_id, event) %>
+              <% end %>
               <td><%= event.host_name %></td>
               <td><%= event.location %></td>
               <td><%= event.time %></td>
