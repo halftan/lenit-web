@@ -28,6 +28,8 @@ class User < ActiveRecord::Base
 
   attr_accessible :avatar
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+
+  after_save :add_manager, :unless => :is_manager?
   
   @@ROLES = YAML.load(ENV['ROLES'])
   
@@ -66,5 +68,9 @@ class User < ActiveRecord::Base
   
   def is_manager?
     self.role_ids.include? Role.manager_id
+  end
+
+  def add_manager
+    self.add_role :manager
   end
 end
