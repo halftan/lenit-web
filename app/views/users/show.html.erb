@@ -1,4 +1,6 @@
-<h3>User</h3>
+<h3>
+  <%= t("app.user") %>
+</h3>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
 <p>Avatar: <%= image_tag @user.avatar.url(:medium) if @user.avatar.present? %></p>

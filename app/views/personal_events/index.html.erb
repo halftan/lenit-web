@@ -1,38 +1,44 @@
-<% title "Events" %>
+<% t("app.form.events") %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Location</th>
-    <th>Description</th>
-    <th>Time</th>
-    <th>Duration</th>
-    <th>Visibility</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  <% for event in @personal_events %>
-    <tr>
-      <td><%= event.name %></td>
-      <td><%= event.location %></td>
-      <td><%= event.description %></td>
-      <td><%= event.time %></td>
-      <td><%= event.duration %></td>
-      <td><%= event.visibility %></td>
-      <td><%= link_to "Show", [@user, event] %></td>
-      <% if can? :manage, event %>
-        <td><%= link_to "Edit", edit_user_personal_event_path(@user, event) %></td>
-        <td><%= link_to "Destroy", [@user, event], :confirm => 'Are you sure?', :method => :delete %></td>
-      <% else %>
-        <% if event.attendees.include? current_user %>
-          <td><%= link_to("Quit event", quit_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
-        <% else %>
-          <td><%= link_to("Attend event", attend_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
-        <% end %>
+<div class="span8">
+  <table class = "table table-condensed">
+    <thead>
+      <tr>
+        <th><%= t("app.form.name") %></th>
+        <th><%= t("app.form.location") %></th>
+        <th><%= t("app.form.description") %></th>
+        <th><%= t("app.form.time") %></th>
+        <th><%= t("app.form.duration") %></th>
+        <th><%= t("app.form.visibility") %></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for event in @personal_events %>
+        <tr>
+          <td><%= event.name %></td>
+          <td><%= event.location %></td>
+          <td><%= event.description %></td>
+          <td><%= event.time %></td>
+          <td><%= event.duration %></td>
+          <td><%= event.visibility %></td>
+          <td><%= link_to "Show", [@user, event] %></td>
+          <% if can? :manage, event %>
+            <td><%= link_to "Edit", edit_user_personal_event_path(@user, event) %></td>
+            <td><%= link_to "Destroy", [@user, event], :confirm => 'Are you sure?', :method => :delete %></td>
+          <% else %>
+            <% if event.attendees.include? current_user %>
+              <td><%= link_to("Quit event", quit_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
+            <% else %>
+              <td><%= link_to("Attend event", attend_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
+            <% end %>
+          <% end %>
+        </tr>
       <% end %>
-    </tr>
-  <% end %>
-</table>
+      </tbody>
+  </table>
 
-<p><%= link_to "New Event", new_user_personal_event_path(current_user) if current_user == @user%></p>
+  <p><%= link_to "New Event", new_user_personal_event_path(current_user) if current_user == @user%></p>
+</div>

@@ -1,13 +1,13 @@
-<% title "Events" %>
+<% t("app.form.events") %>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Location</th>
-    <th>Description</th>
-    <th>Time</th>
-    <th>Duration</th>
-    <th>Visibility</th>
+    <th><%= t("app.form.name") %></th>
+        <th><%= t("app.form.location") %></th>
+        <th><%= t("app.form.description") %></th>
+        <th><%= t("app.form.time") %></th>
+        <th><%= t("app.form.duration") %></th>
+        <th><%= t("app.form.visibility") %></th>
   </tr>
   <% for event in @provided_events %>
     <tr>
