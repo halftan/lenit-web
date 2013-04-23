@@ -9,6 +9,7 @@ gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.0.4"
 gem "figaro", ">= 0.5.3"
+gem "jbuilder"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
