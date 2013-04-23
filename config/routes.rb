@@ -22,4 +22,8 @@ Lenit::Application.routes.draw do
   end
   post 'event/:id/attend' => 'events#attend', :constraints => { :id => /\d+/ }, :as => 'attend_event'
   post 'event/:id/quit' => 'events#quit', :constraints => { :id => /\d+/ }, :as => 'quit_event'
+
+  namespace :api, :format => :json do
+    resources :providers
+  end
 end
