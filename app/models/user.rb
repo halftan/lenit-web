@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
   attr_accessible :avatar
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
+  before_save :ensure_authentication_token
   after_save :add_manager, :unless => :is_manager?
   
   @@ROLES = YAML.load(ENV['ROLES'])

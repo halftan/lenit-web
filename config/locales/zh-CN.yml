@@ -1,4 +1,8 @@
 zh-CN:
+  controller:
+    missing_param: "错误的参数"
+    error_login: "邮箱或密码错误"
+    success: "成功"
   date:
     abbr_day_names:
     - 日

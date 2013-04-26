@@ -4,7 +4,7 @@ Lenit::Application.routes.draw do
   #   root :to => 'users#show/:id'
   # end
   root :to => 'home#index'
-  devise_for :users
+  devise_for :users, :token_authentication_key => :login_token
   resources :users do
     resources :personal_events, :path => "events"
     resources :providers
@@ -24,6 +24,8 @@ Lenit::Application.routes.draw do
   post 'event/:id/quit' => 'events#quit', :constraints => { :id => /\d+/ }, :as => 'quit_event'
 
   namespace :api, :format => :json do
-    resources :providers
+    resources :providers, :only => [:index, :show]
+    resources :sessions, :only => [:create, :destroy]
+    resources :my_providers
   end
 end

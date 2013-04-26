@@ -2,4 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  controller:
+    missing_param: "missing user_login parameter"
+    error_login: "Error with your login or password"
+    success: "Succeeded"
