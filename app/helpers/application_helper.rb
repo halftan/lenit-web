@@ -11,5 +11,21 @@ module ApplicationHelper
     HTML
     html.html_safe
   end
+  
+  def init_datetime_picker
+    html = <<-HTML
+    <script type="text/javascript" charset="utf-8">
+      var picker = $("[data-behavior~='datetime-picker']");
+      picker.datetimepicker({
+        language: 'zh-CN',
+        pick12HourFormat: true,
+        pickSeconds: false
+      });
+      picker = $("[data-behavior~='datetime-picker']").data('datetimepicker');
+      picker.setLocalDate(picker.getDate());      
+    </script>
+    HTML
+    html.html_safe
+  end
 
 end

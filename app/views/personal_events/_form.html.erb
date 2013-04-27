@@ -1,3 +1,6 @@
+<% content_for :head do %>
+<%= javascript_include_tag "form" %>
+<% end %>
 <%= simple_form_for [current_user, @personal_event] do |f| %>
   <%= f.error_messages %>
   <p>
@@ -14,7 +17,9 @@
   </p>
   <p>
     <%= f.label :time %><br />
-    <%= f.datetime_select :time %>
+    <%= f.input :time, :as => :datetime_picker %>
+    <%= init_datetime_picker %>
+    
   </p>
   <p>
     <%= f.label :duration %><br />

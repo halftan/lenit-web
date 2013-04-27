@@ -15,6 +15,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-datetimepicker-rails'
 end
 
 group :development do
@@ -22,6 +23,7 @@ group :development do
   gem "better_errors", ">= 0.3.2"
   gem "binding_of_caller", ">= 0.6.8"
   gem "pry-rails"
+  gem "meta_request"
 end
 
 group :test do
