@@ -27,5 +27,7 @@ Lenit::Application.routes.draw do
     resources :providers, :only => [:index, :show]
     resources :sessions, :only => [:create, :destroy]
     resources :my_providers
+    resources :my_events
+    resources :events
   end
 end
