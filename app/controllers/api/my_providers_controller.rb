@@ -1,8 +1,5 @@
 class Api::MyProvidersController < Api::ApiBaseController
   before_filter :authenticate_user!
-  respond_to :json
-  
-  # before_filter :ensure_params_exist
 
   def index
     @providers = current_user.providers
@@ -13,6 +10,7 @@ class Api::MyProvidersController < Api::ApiBaseController
   end
 
   def update
+    @provider = Provider.find(params[:id])
     if @provider.update_attributes(params[:provider])
       render :json=> {:success=>true, :message=>I18n.t("controller.success")}, :status=>200
     else
