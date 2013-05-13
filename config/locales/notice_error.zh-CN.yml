@@ -1,0 +1,11 @@
+zh-CN:
+  app:
+    notice:
+      events:
+        quit_event: "成功退出活动."
+    alert:
+      events:
+        host_cannot_quit: "主持人无法退出活动！"
+        not_attended: "尚未参加此活动."
+    errors:
+        access_densied: "您没有足够的权限进行此操作"

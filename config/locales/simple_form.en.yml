@@ -20,10 +20,6 @@ en:
     #       email: 'E-mail to sign in.'
     #     edit:
           # email: 'E-mail.'
-    # hints:
-    #   defaults:
-    #     username: 'User name to sign in.'
-    #     password: 'No special characters, please.'
     options:
       defaults:
         visibility:
@@ -35,20 +31,23 @@ en:
         name: "Name"
         description: "Description"
         time: "Time"
+        location: "Location"
+        visibility: "Visibility"
       provided_event:
         duration: "Duration"
     hints:
-      provided_event:
+      defaults:
         duration: "Duration of the event"
-      personal_event:
-        duration: "Duration of the event"
+        visibility: "Who do you want to be noticed?"
     placeholders:
       provided_event:
         name: "Name of the event"
       personal_event:
         name: "Name of the event"
-    placeholders:
-      provider:
+      user:
+        password: "Please input your password"
+      defaults:
         description: "Please describe your event provider briefly. e.g. What kind of events do you provide? Whether you welcome newbies?"
         location: "Where is the event to be held?"
+        email: "Please input your email address"
 

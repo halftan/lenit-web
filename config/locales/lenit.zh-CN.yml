@@ -1,7 +1,5 @@
 zh-CN:
   app:
-    errors:
-        access_densied: "您没有足够的权限进行此操作"
     titles:
         home: "首页"
         personal_event: "个人活动"
@@ -12,7 +10,7 @@ zh-CN:
         follower: "粉丝"
     new_event: "新活动"
     attended_events: "已参加的活动"
-    followeds_events: "关注用户的活动"
+    followeds_events: "关注的活动"
     quit_event: "退出活动"
     attend_event: "参加活动"
     register_provider: "注册活动中心"
@@ -24,9 +22,10 @@ zh-CN:
     not_a_member: "还不是会员?"
     already_a_member: "已经是会员？"
     remember_me: "记住账户"
+    signin: "登录"
     sign_in:
-        email_hint: "输入邮箱地址"
-        password_hint: "输入密码"
+        email_hint: "请输入邮箱地址"
+        password_hint: "请输入密码"
     user: "用户"
     signup: "注册"
     back: "返回"

@@ -1,44 +1,48 @@
-
-    <%= link_to t("app.attended_events"), root_path(:filter => 'attended'), :class => 'span3 btn btn-mini' %>
-    <%= link_to t("app.followeds_events"), root_path(:filter => 'followed'), :class => 'span3 btn btn-mini' %>
-    <table class="table table-condensed table-hover">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Host</th>
-          <th>Location</th>
-          <th>Time</th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-      <% @events.each do |event|%>
-        <tr>
-          <td>
-            <% if event.is_a? ProvidedEvent %>
-              <%= link_to event.name, provider_provided_event_path(event.owner_id, event) %>
-            <% else %>
-              <%= link_to event.name, user_personal_event_path(event.owner_id, event) %>
-            <% end %>
-          </td>
-          <td>
-            <% if event.is_a? ProvidedEvent %>
-              <%= link_to event.host_name, provider_path(event.owner_id) %>
-            <% else %>
-              <%= link_to event.host_name, user_path(event.owner_id) %>
-            <% end %>
-          </td>
-          <td><%= event.host_name %></td>
-          <td><%= event.location %></td>
-          <td><%= event.time %></td>
-          <td></td>
-          <% if event.attendees.include? current_user %>
-            <td><%= link_to("Quit event", quit_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
-          <% else %>
-            <td><%= link_to("Attend event", attend_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
-          <% end %>
-        </tr>
+<ul class="nav nav-pills">
+  <li class="active"><%= link_to t("app.attended_events"), root_path(:filter => 'attended') %></li>
+  <li><%= link_to t("app.followeds_events"), root_path(:filter => 'followed') %></li>
+</ul>
+<% content_for :notice_message do %>
+  <%= notice_message %>
+<% end %>
+<%= yield(:notice_message) %>
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Host</th>
+      <th>Location</th>
+      <th>Time</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @events.each do |event|%>
+    <tr>
+      <td>
+        <% if event.is_a? ProvidedEvent %>
+          <%= link_to event.name, provider_provided_event_path(event.owner_id, event) %>
+        <% else %>
+          <%= link_to event.name, user_personal_event_path(event.owner_id, event) %>
+        <% end %>
+      </td>
+      <td>
+        <% if event.is_a? ProvidedEvent %>
+          <%= link_to event.host_name, provider_path(event.owner_id) %>
+        <% else %>
+          <%= link_to event.host_name, user_path(event.owner_id) %>
+        <% end %>
+      </td>
+      <td><%= event.location %></td>
+      <td><%= l(event.time) %></td>
+      <td></td>
+      <% if event.attendees.include? current_user %>
+        <td><%= link_to("Quit event", quit_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
+      <% else %>
+        <td><%= link_to("Attend event", attend_event_path(event), :method => :post, :class => 'btn btn-mini') %></td>
       <% end %>
-      </tbody>
-    </table>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -32,18 +32,21 @@ zh-CN:
         description: "简介"
         location: "地点"
         time: "时间"
+        visibility: "可见度"
       provided_event:
         duration: "持续时间"
     hints:
-      provided_event:
+      defaults:
         duration: "活动的持续时间"
-      personal_event:
-        duration: "活动的持续时间"
+        visibility: "谁能知晓此活动？"
     placeholders:
       provided_event:
         name: "活动的名称"
       personal_event:
         name: "活动的名称"
+      user:
+        password: "请输入密码"
       defaults:
         description: "请简要描述您的活动中心，如：提供的活动类型，是否欢迎新人等"
         location: "活动举办的地点"
+        email: "请输入邮箱地址"

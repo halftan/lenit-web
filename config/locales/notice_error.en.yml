@@ -1,0 +1,11 @@
+en:
+  app:
+    notice:
+      events:
+        quit_event: "Successfully quited the event."
+    alert:
+      events:
+        host_cannot_quit: "Your are the host of this event!"
+        not_attended: "You have not attended yet."
+    errors:
+        access_densied: "You have not authorized to do this."

@@ -1,7 +1,5 @@
 en:
   app:
-    errors:
-        access_densied: "You have not authorized to do this."
     titles:
         home: "Home"
         personal_event: "Personal Event"

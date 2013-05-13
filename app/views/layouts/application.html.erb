@@ -22,9 +22,11 @@
       <div class="container">
         <div class="content">
            <div class="row">
-            <div class="span8">
+            <div class="span12">
               <!-- <%= render 'layouts/messages' %> -->
-              <%= notice_message %>
+              <% unless content_for?(:notice_message) %>
+                <%= notice_message %>
+              <% end %>
               <%= yield %>
             </div>
           </div>

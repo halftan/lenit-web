@@ -1,4 +1,4 @@
-<%= simple_form_for([current_user, @provider]) do |f| %>
+<%= simple_form_for([current_user, @provider], :html => {:class => 'form-horizontal'}) do |f| %>
   <legend><%= t("app.titles.provider") %></legend>
 
   <%= f.error_messages %>
