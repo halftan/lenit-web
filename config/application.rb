@@ -74,3 +74,6 @@ module Lenit
     config.assets.version = '1.0'
   end
 end
+
+# bootstrap-helper config
+SITE_NAME = "Lenit"

@@ -1,0 +1,11 @@
+zh-CN:
+  activerecord:
+    models:
+        user: "用户"
+        provider: "活动中心"
+        event: "活动"
+        provided_event: "活动"
+        personal_event: "个人活动"
+    attributes:
+        user:
+            name: "名称"

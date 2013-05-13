@@ -1,6 +1,8 @@
 class ProvidedEventsController < ApplicationController
   load_and_authorize_resource :provider
   load_and_authorize_resource :through => :provider
+  before_filter :set_page_title
+
   def index
   end
 
@@ -33,5 +35,10 @@ class ProvidedEventsController < ApplicationController
   def destroy
     @provided_event.destroy
     redirect_to provider_provided_events_url(@provider), :notice => "Successfully destroyed event."
+  end
+
+  protected
+  def set_page_title
+    @page_title = I18n.t"app.titles.provided_event"
   end
 end

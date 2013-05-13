@@ -2,6 +2,7 @@ en:
   simple_form:
     "yes": 'Yes'
     "no": 'No'
+    reset: "Reset"
     required:
       text: 'required'
       mark: '*'
@@ -18,9 +19,36 @@ en:
     #     new:
     #       email: 'E-mail to sign in.'
     #     edit:
-    #       email: 'E-mail.'
+          # email: 'E-mail.'
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
+    options:
+      defaults:
+        visibility:
+          everybody: "Everybody"
+          followers_only: "Followers only"
+          specified: "Specified users only(not implemented)"
+    labels:
+      defaults:
+        name: "Name"
+        description: "Description"
+        time: "Time"
+      provided_event:
+        duration: "Duration"
+    hints:
+      provided_event:
+        duration: "Duration of the event"
+      personal_event:
+        duration: "Duration of the event"
+    placeholders:
+      provided_event:
+        name: "Name of the event"
+      personal_event:
+        name: "Name of the event"
+    placeholders:
+      provider:
+        description: "Please describe your event provider briefly. e.g. What kind of events do you provide? Whether you welcome newbies?"
+        location: "Where is the event to be held?"
 

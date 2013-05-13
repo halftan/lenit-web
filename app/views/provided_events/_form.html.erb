@@ -1,31 +1,16 @@
+<% content_for :head do %>
+<%= javascript_include_tag "form" %>
+<% end %>
 <%= simple_form_for [@provider, @provided_event] do |f| %>
+  <legend><%= t "app.titles.provided_event" %></legend>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :time %><br />
-    <%= f.datetime_select :time %>
-  </p>
-  <p>
-    <%= f.label :duration %><br />
-    <%= f.number_field :duration %>
-  </p>
-  <p>
-    <%= f.label :visibility %><br />
-    <%= f.number_field :visibility %>
-  </p>
-  <p>
-    <%= f.hidden_field :owner_id %>
-  </p>
-  <p><%= f.submit "Save" %></p>
+  <%= f.input :name, :required => true %>
+  <%= f.input :location, :required => true %>
+  <%= f.input :time, :as => :datetime_picker, :required => true %>
+  <%= init_datetime_picker %>
+  <%= f.input :description, input_html: { rows: 8 } %>
+  <%= f.input :duration %>
+  <%= f.input :visibility, :collection => [:everybody, :followers_only, :specified], :default => :everybody %>
+  <%= f.hidden_field :owner_id %>
+  <%= form_actions f %>
 <% end %>

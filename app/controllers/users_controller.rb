@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :set_page_title
 
   def follow
     authorize! :follow, current_user, :message => "You are editing other user's profile!"
@@ -28,6 +29,7 @@ class UsersController < ApplicationController
   end
 
   def followed
+    @page_title = I18n.t"app.titles.followed"
     unless user_signed_in?
       redirect_to new_user_session_path, :notice => "To proceed you need to sign in."
     else
@@ -36,6 +38,7 @@ class UsersController < ApplicationController
   end
 
   def follower
+    @page_title = I18n.t"app.titles.follower"
     unless user_signed_in?
       redirect_to new_user_session_path, :notice => "To proceed you need to sign in."
     else
@@ -91,5 +94,9 @@ class UsersController < ApplicationController
   protected
   def helpers
     ActionController::Base.helpers
+  end
+  
+  def set_page_title
+    @page_title = I18n.t"app.titles.users"
   end
 end

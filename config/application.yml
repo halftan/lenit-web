@@ -9,7 +9,7 @@
 #
 GMAIL_USERNAME: azusasoft
 GMAIL_PASSWORD: azusasoftisaorg
-ADMIN_NAME: azusa
-ADMIN_EMAIL: azusasoft@gmail.com
-ADMIN_PASSWORD: azusamoe
+ADMIN_NAME: admin
+ADMIN_EMAIL: admin@example.com
+ADMIN_PASSWORD: passwd
 ROLES: [admin, manager, starred_user, moderator]

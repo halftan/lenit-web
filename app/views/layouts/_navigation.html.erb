@@ -1,5 +1,27 @@
+<%= link_to "Lenit", root_url, :class => 'brand' %>
+
+<%= render_list :class => "nav" do |li|
+  if user_signed_in?
+    li << link_to(t('app.nav.my_events'), user_personal_events_path(current_user))
+    li << link_to(t('app.nav.followers'), follower_user_path(current_user))
+    li << link_to(t('app.nav.follows'), followed_user_path(current_user))
+    if current_user.has_role? :manager
+      li << link_to(t('app.nav.my_providers'), user_providers_path(current_user))
+    end
+    li << link_to(t('app.nav.edit_account'), edit_user_registration_path)
+    if current_user.has_role? :admin
+      li << link_to(t('app.nav.admin'), users_path)
+    end
+    li << link_to(t('app.nav.all_providers'), all_providers_path)
+    li << link_to(t('app.nav.logout'), destroy_user_session_path, :method=>'delete')
+  else
+    li << link_to(t('app.nav.all_providers'), all_providers_path)
+    li << link_to(t('app.nav.signup'), new_user_registration_path)
+    li << link_to(t('app.nav.login'), new_user_session_path)
+  end
+end %>
+<!-- 
 <% if user_signed_in? %>
-  <%= link_to "Lenit", root_url, :class => 'brand' %>
   <ul class="nav">
     <li>
       <%= link_to t('app.nav.logout'), destroy_user_session_path, :method=>'delete' %>
@@ -27,7 +49,6 @@
     </li>
     <% end %>
 <% else %>
-  <%= link_to "Lenit", root_path, :class => 'brand' %>
   <ul class="nav">
     <li>
       <%= link_to t('app.nav.login'), new_user_session_path %>
@@ -37,6 +58,7 @@
     </li>
 <% end %>
     <li>
-      <%= link_to t('app.nav.all_providers'), all_providers_path if can? :read, Provider %>
+      <%= link_to t('app.nav.all_providers'), all_providers_path %>
     </li>
   </ul>
+ -->

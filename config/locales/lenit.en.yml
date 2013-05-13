@@ -1,5 +1,15 @@
 en:
   app:
+    errors:
+        access_densied: "You have not authorized to do this."
+    titles:
+        home: "Home"
+        personal_event: "Personal Event"
+        provided_event: "Provider's Event"
+        provider: "Event Provider"
+        users: "Users"
+        followed: "Followed"
+        follower: "Follower"
     new_event: "New Event"
     attended_events: "Attended events"
     followeds_events: "Followed user's events"
@@ -16,11 +26,12 @@ en:
     already_a_member: "Already a member?"
     remember_me: "Remember Me"
     signin: "Sign in"
-    user: "User"
     sign_in:
         email_hint: "Your Email Here"
         password_hint: "Your Password Here"
+    user: "User"
     signup: "Sign up"
+    back: "Back"
     sign_up:
         avatar: "Avatar"
         change_password: "we need your current password to confirm your changes"

@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   def index
+
+    @page_title = I18n.t("app.titles.home")
+
     if user_signed_in?
       @user = current_user
       @signed_in = true

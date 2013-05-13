@@ -1,0 +1,49 @@
+zh-CN:
+  simple_form:
+    "yes": '是'
+    "no": '否'
+    reset: "重置"
+    required:
+      text: '必填的'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "请查看下面的错误提示："
+    # Labels and hints examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    options:
+      defaults:
+        visibility:
+          everybody: "所有人"
+          followers_only: "仅限粉丝"
+          specified: "指定用户可见（即将到来）"
+    labels:
+      defaults:
+        name: "名称"
+        description: "简介"
+        location: "地点"
+        time: "时间"
+      provided_event:
+        duration: "持续时间"
+    hints:
+      provided_event:
+        duration: "活动的持续时间"
+      personal_event:
+        duration: "活动的持续时间"
+    placeholders:
+      provided_event:
+        name: "活动的名称"
+      personal_event:
+        name: "活动的名称"
+      defaults:
+        description: "请简要描述您的活动中心，如：提供的活动类型，是否欢迎新人等"
+        location: "活动举办的地点"

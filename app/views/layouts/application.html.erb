@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= locale.to_s %>">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Lenit" %></title>
+    <!-- <title><%= content_for?(:title) ? yield(:title) : "Lenit" %></title> -->
+    <%= render_page_title %>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Lenit" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -21,8 +22,9 @@
       <div class="container">
         <div class="content">
            <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
+            <div class="span8">
+              <!-- <%= render 'layouts/messages' %> -->
+              <%= notice_message %>
               <%= yield %>
             </div>
           </div>

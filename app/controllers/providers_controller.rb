@@ -1,6 +1,8 @@
 class ProvidersController < ApplicationController
   load_and_authorize_resource :user, :except => [:all, :show]
   load_and_authorize_resource :through => :user, :except => [:all, :show]
+  before_filter :set_page_title
+
   rescue_from "ActiveRecord::RecordNotFound" do |ex|
     redirect_to root_url, :alert => 'You are not authorized to this page.'
   end
@@ -46,5 +48,8 @@ class ProvidersController < ApplicationController
   end
   
   protected
+  def set_page_title
+    @page_title = I18n.t"app.titles.provider"
+  end
   
 end

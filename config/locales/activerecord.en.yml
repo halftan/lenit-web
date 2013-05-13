@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    models:
+        admin/user: "User"
+        provider: "Event Provider"
+        event: "Event"
+        provided_event: "Provided Event"
+        personal_event: "Personal Event"
+    attributes:
+        admin/user:
+            name: "Name"

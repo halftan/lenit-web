@@ -2,6 +2,7 @@
 <%= javascript_include_tag "form" %>
 <% end %>
 <%= simple_form_for [current_user, @personal_event] do |f| %>
+  <legend><%= t "app.titles.personal_event" %></legend>
   <%= f.error_messages %>
   <p>
     <%= f.label :name %><br />

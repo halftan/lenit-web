@@ -1,12 +1,9 @@
-<%= simple_form_for [current_user, @provider] do |f| %>
+<%= simple_form_for([current_user, @provider]) do |f| %>
+  <legend><%= t("app.titles.provider") %></legend>
+
   <%= f.error_messages %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p><%= f.submit "Register" %></p>
+
+  <%= f.input :name, :required => true %>
+  <%= f.input :description, :as => :text, input_html: { rows: 8 } %>
+  <%= form_actions f %>
 <% end %>

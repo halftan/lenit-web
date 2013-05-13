@@ -17,7 +17,7 @@ class Event < ActiveRecord::Base
   scope :outdated, where('time < ?', Time.now)
 
   @@VISIBILITY = {
-    :all            => 1,
+    :everybody      => 1,
     :followers_only => 2,
     :specified      => 3
 
