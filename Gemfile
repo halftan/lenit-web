@@ -9,12 +9,12 @@ gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.0.4"
 gem "figaro", ">= 0.5.3"
 gem "jbuilder"
+gem 'bootstrap_helper'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem "bootstrap-sass", "2.3.1.0"
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap_helper'
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-datetimepicker-rails'
 end
