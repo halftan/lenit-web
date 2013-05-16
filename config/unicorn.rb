@@ -10,7 +10,7 @@
 
 # Use at least one worker per core if you're on a dedicated server,
 # more will usually help for _short_ waits on databases/caches.
-env = ENV["RAILS_ENV"] || "productioin"
+env = ENV["RAILS_ENV"] || "production"
 worker_processes 1
 
 # Help ensure your application will always spawn in the symlinked
