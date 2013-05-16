@@ -17,7 +17,7 @@ When /^I click "(.*?)"$/ do |locator|
   else
     click_on locator
   end
-  # save_and_open_page
+#  save_and_open_page
 end
 
 When /^I click on "([^"]*?)"$/ do |locator|
@@ -50,7 +50,7 @@ end
 
 
 Then /^I should see "(.*?)"$/ do |contents|
-  # save_and_open_page
+#  save_and_open_page
   contents.tr! '"', ''
   contents.split(', ').each do |content|
     page.should have_content content

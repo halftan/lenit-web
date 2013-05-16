@@ -14,7 +14,7 @@ Feature: Provider events
     When I click "New Event"
     And I fill in "Name" with "party"
     And I fill in "Location" with "classroom"
-    And I click "Save"
+    And I click "Create"
     Then I should see "Successfully created event"
     And I should see "party", "classroom"
     
@@ -33,7 +33,7 @@ Feature: Provider events
     Then Input "Name" should have value "party"
     When I fill in "Name" with "test"
     And I fill in "Location" with "home"
-    And I click "Save"
+    And I click "Update"
     Then I should see "Successfully"
     And I should see "test", "home"
   

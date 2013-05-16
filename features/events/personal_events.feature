@@ -18,7 +18,7 @@ Feature: Host personal events
     When I follow the ".edit_link" link
     And I fill in "Name" with "picnic"
     And I fill in "Location" with "some place"
-    And I click "Save"
+    And I click "Update"
     Then I should see "Successfully"
     And I should see "picnic"
     And I should not see "party"
@@ -29,7 +29,7 @@ Feature: Host personal events
     When I click "New Event"
     And I fill in "Name" with "party"
     And I fill in "Location" with "home"
-    And I click "Save"
+    And I click "Create"
     Then I should see "Successfully"
     And I should see "party", "home"
   

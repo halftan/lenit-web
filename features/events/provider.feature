@@ -19,7 +19,7 @@ Feature: Provider
     When I click "Register Provider"
     And I fill in "Name" with "School"
     And I fill in "Description" with "My school"
-    And I click "Register"
+    And I click "Create"
     Then I should have 1 "provider"
     And I should see "Successfully registered provider."
     And I should see "School", "My school"

@@ -9,12 +9,12 @@ class HomeController < ApplicationController
 
       # TODO: make this AJAX
       if @user.followeds.present?
-        if params[:filter] == "followed"
+        if params[:filter] == "attended"
+          @events = @user.events
+        else # params[:filter] == "followed"
           @events = @user.followeds.inject([]) do |arr, fol|
             arr + fol.get_all_events
           end
-        else # params[:filter] == "attended"
-          @events = @user.events
         end
       else # show all events
         @events = Event.limit(10).order("created_at DESC")
