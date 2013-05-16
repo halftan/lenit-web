@@ -11,12 +11,12 @@
 # Use at least one worker per core if you're on a dedicated server,
 # more will usually help for _short_ waits on databases/caches.
 env = ENV["RAILS_ENV"] || "productioin"
-worker_processes 4
+worker_processes 1
 
 # Help ensure your application will always spawn in the symlinked
 # "current" directory that Capistrano sets up.
-working_directory "/var/www/Lenit"
-app_path = "/var/www/Lenit"
+working_directory "/home/halftan/rails/lenit"
+app_path = "/home/halftan/rails/lenit"
 # Since Unicorn is never exposed to outside clients, it does not need to
 # run on the standard HTTP port (80), there is no reason to start Unicorn
 # as root unless it's from system init scripts.
@@ -26,14 +26,14 @@ app_path = "/var/www/Lenit"
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen "#{app_path}/tmp/sockets/Lenit.sock", :backlog => 64
+listen "#{app_path}/tmp/lenit.sock", :backlog => 64
 listen 3000, :tcp_nopush => true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
 
 # feel free to point this anywhere accessible on the filesystem
-pid "#{app_path}/tmp/pids/unicorn.backend.pid"
+pid "#{app_path}/tmp/unicorn.backend.pid"
 
 # combine Ruby 2.0.0dev or REE with "preload_app true" for memory savings
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow
