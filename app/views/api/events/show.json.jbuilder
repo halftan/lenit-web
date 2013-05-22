@@ -1,5 +1,6 @@
-json.(@event, :name, :description, :time, :duration, :created_at)
+json.(@event, :id, :name, :description, :time, :created_at, :duration, :location)
 
-json.manager do
-  json.(@event.manager, :name, :blog_link, :signature)
+json.host do
+  json.host_id(@event.owner_id)
+  json.host_name(@event.host_name)
 end
