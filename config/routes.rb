@@ -25,7 +25,9 @@ Lenit::Application.routes.draw do
 
   namespace :api, :format => :json do
     resources :providers, :only => [:index, :show]
-    resources :sessions, :only => [:create, :destroy]
+    resources :sessions, :only => [:create, :destroy] do
+      get 'validate', :on => :collection
+    end
     resources :my_providers
     resources :my_events
     resources :events
