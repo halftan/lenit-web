@@ -10,7 +10,7 @@ en:
         follower: "Follower"
     new_event: "New Event"
     attended_events: "Attended events"
-    followeds_events: "Followed user's events"
+    focused_events: "Interesting events"
     quit_event: "Quit event"
     attend_event: "Attend event"
     register_provider: "Register Provider"

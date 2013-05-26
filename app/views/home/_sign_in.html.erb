@@ -1,6 +1,6 @@
 <div id="sign_in">
   <legend>Lenit&nbsp;<%= t("app.signin") %></legend>
-  <%= simple_form_for(@user, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-vertical'}) do |f| %>
+  <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-vertical'}) do |f| %>
     <%= f.input :email, :label => false, :autofocus => true %>
     <%= f.input :password, :label => false %>
     <div class="control-group">
