@@ -12,9 +12,9 @@
 
   <div class="span6" sytle="test-align:center;">
     <% unless @signed_in %>
-      <%= render 'sign_in' %>
+      <%= render 'sign_in', :resource => @user %>
     <% else %>
-        <%= render "events" %>
+      <%= render "events", :attended_events => @attended_events, :focused_events => @focused_events %>
     <% end %>
   </div>
 

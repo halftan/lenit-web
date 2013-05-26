@@ -59,11 +59,12 @@ class User < ActiveRecord::Base
   end
   
   def get_all_events
+    t = []
     if has_role? :manager
-      providers.inject([]) { |arr, p| arr + p.provided_events.available.to_a } + personal_events.available.to_a
-    else
-      personal_events.available.to_a
+      t = ProvidedEvent.where(:owner_id => provider_ids).to_a
     end
+    t += personal_events.available.to_a
+    return t
   end
   protected
   

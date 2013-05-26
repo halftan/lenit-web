@@ -10,7 +10,7 @@ zh-CN:
         follower: "粉丝"
     new_event: "新活动"
     attended_events: "已参加的活动"
-    followeds_events: "关注的活动"
+    focused_events: "关注的活动"
     quit_event: "退出活动"
     attend_event: "参加活动"
     register_provider: "注册活动中心"
