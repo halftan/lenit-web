@@ -26,12 +26,12 @@ describe Event do
     it "can have attendees" do
       attendee = FactoryGirl.create(:user, {:name => "Another User", :email => "aaa@bar.com"})
       @event.attendees << attendee
-      attendee.events.should include @event
+      attendee.attended_events.should include @event
     end
 
     it "attendees must include the host himself" do
       @event.attendees.should include @user
-      @user.events.should include @event
+      @user.attended_events.should include @event
     end
   end
 end

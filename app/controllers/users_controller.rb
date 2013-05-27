@@ -55,19 +55,6 @@ class UsersController < ApplicationController
   def show
     authorize! :show, current_user, :message => "You are not authorized to this page!"
     @user = User.find(params[:id])
-    if params[:filter] != "attended" and @user.followeds.present?
-      if params[:filter] == "followed"
-        @events = @user.followeds.inject([]) do |arr, guy|
-          arr + guy.get_all_events
-        end
-      else
-        @events = @user.followeds.inject([]) do |arr, guy|
-          arr + guy.get_all_events
-        end + @user.events
-      end
-    else # params[:filter] == "attended"
-      @events = @user.events
-    end
   end
 
   def update

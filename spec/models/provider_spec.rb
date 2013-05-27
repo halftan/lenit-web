@@ -37,9 +37,9 @@ describe Provider do
     it "can have attendees" do
       event = @provider.provided_events.create!(@attr)
       attandee = FactoryGirl.create :user
-      attandee.events << event
+      attandee.attended_events << event
       @provider.provided_events.should include event
-      attandee.events.should include event
+      attandee.attended_events.should include event
     end
   end
 end
