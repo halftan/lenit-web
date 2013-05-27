@@ -1,4 +1,4 @@
-@focus
+
 Feature: See event
   In order to see what event my friend provide
   As a follower

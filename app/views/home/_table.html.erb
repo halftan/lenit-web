@@ -21,9 +21,9 @@
       </td>
       <td>
         <% if event.is_a? ProvidedEvent %>
-          <%= link_to event.host_name, provider_path(event.owner_id) %>
+          <%= link_to event.host.name, provider_path(event.owner_id) %>
         <% else %>
-          <%= link_to event.host_name, user_path(event.owner_id) %>
+          <%= link_to event.host.name, user_path(event.owner_id) %>
         <% end %>
       </td>
       <td><%= event.location %></td>

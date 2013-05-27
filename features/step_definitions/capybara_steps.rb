@@ -50,7 +50,7 @@ end
 
 
 Then /^I should see "(.*?)"$/ do |contents|
-#  save_and_open_page
+  save_and_open_page
   contents.tr! '"', ''
   contents.split(', ').each do |content|
     page.should have_content content
