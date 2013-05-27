@@ -7,23 +7,11 @@ class HomeController < ApplicationController
       @user = current_user
       @signed_in = true
 
-      @attended_events = @user.events
+      @attended_events = @user.attended_events
       @focused_events = @user.followeds.inject([]) do |arr, followed|
-        arr + fol.get_all_events
+        arr + followed.get_all_events
       end
 
-      # # TODO: make this AJAX
-      # if @user.followeds.present?
-      #   if params[:filter] == "attended"
-      #     @events = @user.events
-      #   else # params[:filter] == "followed"
-      #     @events = @user.followeds.inject([]) do |arr, fol|
-      #       arr + fol.get_all_events
-      #     end
-      #   end
-      # else # show all events
-      #   @events = Event.limit(10).order("created_at DESC")
-      # end
     else
       @user = User.new
       @user.email = nil

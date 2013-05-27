@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   has_many :providers, :foreign_key => "manager_id"
 
   has_many :attendance
-  has_many :events, :through => :attendance
+  has_many :attended_events, :through => :attendance, :source => :event
   
   # Following and Followers
   has_many :followings

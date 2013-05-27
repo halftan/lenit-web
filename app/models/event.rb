@@ -7,6 +7,8 @@ class Event < ActiveRecord::Base
 
   has_many :attendance
   has_many :attendees, :through => :attendance, :source => :user, :uniq => true
+
+  has_one :host, :class_name => :user
   
   validates_presence_of :name
   

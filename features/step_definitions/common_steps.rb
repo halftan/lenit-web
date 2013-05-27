@@ -32,7 +32,7 @@ end
 
 
 When /^I visit my homepage$/ do
-  visit user_url @user
+  visit root_url
 end
 
 When /^I visit the homepage$/ do
