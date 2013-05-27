@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   
   has_many :providers, :foreign_key => "manager_id"
 
+  has_many :hosted_events, :foreign_key => "event_id"
+
   has_many :attendance
   has_many :attended_events, :through => :attendance, :source => :event
   
@@ -44,7 +46,7 @@ class User < ActiveRecord::Base
     elsif other.is_a? Fixnum
       self.followeds << User.find(other)
     else
-      raise ArgumentError, "Argument class not match."
+      raise ArgumentError, "Argument must be fixnum or user."
     end
   end
   
@@ -54,14 +56,18 @@ class User < ActiveRecord::Base
     elsif other.is_a? Fixnum
       self.followeds.delete User.find(other)
     else
-      raise ArgumentError, "Argument class not match."
+      raise ArgumentError, "Argument must be fixnum or user."
     end
   end
   
+  def get_focused_events
+    return Event.where(:host_id => self.followed_ids).order("time DESC").limit(20).available
+  end
+
   def get_all_events
     t = []
     if has_role? :manager
-      t = ProvidedEvent.where(:owner_id => provider_ids).to_a
+      t = ProvidedEvent.where(:owner_id => provider_ids).available.to_a
     end
     t += personal_events.available.to_a
     return t

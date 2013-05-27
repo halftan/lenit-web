@@ -8,12 +8,12 @@ class Event < ActiveRecord::Base
   has_many :attendance
   has_many :attendees, :through => :attendance, :source => :user, :uniq => true
 
-  has_one :host, :class_name => :user
+  belongs_to :host, :class_name => "User"
   
   validates_presence_of :name
   
   after_initialize :set_defaults
-  before_save :set_host_name
+  before_save :set_host
   
   scope :available, where('time >= ?', Time.now)
   scope :outdated, where('time < ?', Time.now)
@@ -37,7 +37,13 @@ class Event < ActiveRecord::Base
     self.duration ||= 1.hour
   end
   
-  def set_host_name
-    self.host_name = owner.name
+  def set_host
+    if self.is_a? ProvidedEvent
+      self.host = owner.manager
+      attendees << owner.manager
+    else
+      self.host = owner
+      attendees << owner
+    end
   end
 end

@@ -7,10 +7,8 @@ class HomeController < ApplicationController
       @user = current_user
       @signed_in = true
 
-      @attended_events = @user.attended_events
-      @focused_events = @user.followeds.inject([]) do |arr, followed|
-        arr + followed.get_all_events
-      end
+      @attended_events = @user.attended_events.available
+      @focused_events = @user.get_focused_events
 
     else
       @user = User.new
