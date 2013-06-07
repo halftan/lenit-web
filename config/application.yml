@@ -8,7 +8,7 @@
 # Add application configuration variables here, as shown below.
 #
 GMAIL_USERNAME: azusasoft
-GMAIL_PASSWORD: azusasoftisaorg
+GMAIL_PASSWORD: azusasoftisanorg
 ADMIN_NAME: admin
 ADMIN_EMAIL: admin@example.com
 ADMIN_PASSWORD: passwd
