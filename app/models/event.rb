@@ -38,12 +38,14 @@ class Event < ActiveRecord::Base
   end
   
   def set_host
-    if self.is_a? ProvidedEvent
-      self.host = owner.manager
-      attendees << owner.manager
-    else
-      self.host = owner
-      attendees << owner
+    if self.host.blank?
+      if self.is_a? ProvidedEvent
+        self.host = owner.manager
+        attendees << owner.manager
+      else
+        self.host = owner
+        attendees << owner
+      end
     end
   end
 end
